@@ -21,8 +21,6 @@ public class PlayerController : MonoBehaviour {
 
         Vector2 _velocity = new Vector2(_x, _y);
 
-        Debug.Log("vecteur : " + _velocity);
-
         motor.RunAndJump(_velocity);
     }
 }
