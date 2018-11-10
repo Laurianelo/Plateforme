@@ -17,6 +17,10 @@ public class PlayerMotor : MonoBehaviour {
     [SerializeField]
     private LayerMask layer;
 
+    private bool grounded;
+
+    public bool Grounded { get { return grounded; } }
+
     // Use this for initialization
     void Start() {
         velocity = Vector2.zero;
@@ -34,8 +38,8 @@ public class PlayerMotor : MonoBehaviour {
 
     private void RunAndJumpPerform()
     {
-        bool _grounded = Physics2D.OverlapCircle(groundCheck.transform.position,radiusCircle, layer);
-        if(_grounded)
+        grounded = Physics2D.OverlapCircle(groundCheck.transform.position,radiusCircle, layer);
+        if(grounded)
         {
             rb.AddForce(new Vector2(0f, velocity.y) * Time.deltaTime * maxSpeedJump, ForceMode2D.Impulse);
         }
