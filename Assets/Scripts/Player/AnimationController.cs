@@ -28,8 +28,7 @@ public class AnimationController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(player.GetX);
-            
+                    
         bool run = player.GetX == 1 || player.GetX == -1;
 
 

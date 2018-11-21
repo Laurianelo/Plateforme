@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Paralaxing : MonoBehaviour {
 
-    [SerializeField] private GameObject[] paralaxGameObject;
+    [SerializeField]
+    private GameObject[] paralaxGameObject;
 
     [SerializeField]
     private float[] speedParalax;

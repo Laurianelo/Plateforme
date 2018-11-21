@@ -28,24 +28,32 @@ namespace UnitySampleAssets._2D
 
         private void Update()
         {
-
-            // only update lookahead pos if accelerating or changed direction
-            float xMoveDelta = (target.position - lastTargetPosition).x;
-
-            bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
-
-            if (updateLookAheadTarget)
+            if(target == null)
             {
-                lookAheadPos = lookAheadFactor*Vector3.right*Mathf.Sign(xMoveDelta);
+                return;
+            }
+            // only update lookahead pos if accelerating or changed direction
+            float _xMoveDelta = (target.position - lastTargetPosition).x;
+
+            bool _updateLookAheadTarget = Mathf.Abs(_xMoveDelta) > lookAheadMoveThreshold;
+
+            if (_updateLookAheadTarget)
+            {
+                lookAheadPos = lookAheadFactor*Vector3.right*Mathf.Sign(_xMoveDelta);
             }
             else
             {
                 lookAheadPos = Vector3.MoveTowards(lookAheadPos, Vector3.zero, Time.deltaTime*lookAheadReturnSpeed);
             }
 
-            Vector3 aheadTargetPos = target.position + lookAheadPos + Vector3.forward*offsetZ;
-            Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
-            transform.position = newPos;
+            Vector3 _aheadTargetPos = target.position + lookAheadPos + Vector3.forward*offsetZ;
+            Vector3 _newPos = Vector3.SmoothDamp(transform.position, _aheadTargetPos, ref currentVelocity, damping);
+
+            float _newPosY = Mathf.Clamp(_newPos.y, -2, Mathf.Infinity);
+
+            _newPos.y = _newPosY;
+
+            transform.position = _newPos;
 
             lastTargetPosition = target.position;
         }

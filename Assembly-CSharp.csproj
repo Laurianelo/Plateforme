@@ -61,12 +61,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AnimationController.cs" />
-    <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
-    <Compile Include="Assets\Scripts\Paralaxing.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PlayerMotor.cs" />
-    <Compile Include="Assets\Scripts\Tilling.cs" />
+    <Compile Include="Assets\Scripts\Environnement\Camera2DFollow.cs" />
+    <Compile Include="Assets\Scripts\Environnement\Paralaxing.cs" />
+    <Compile Include="Assets\Scripts\Environnement\Tilling.cs" />
+    <Compile Include="Assets\Scripts\Environnement\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Player\AnimationController.cs" />
+    <Compile Include="Assets\Scripts\Player\ArmRotation.cs" />
+    <Compile Include="Assets\Scripts\Player\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Player\MoveBullet.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Lauriane/Documents/UnityProjects/Plateforme/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
