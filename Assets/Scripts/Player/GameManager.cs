@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour {
 
     private Player playerScript;
 
-    public static GameManager Instance { get{ return instance; } }
+    public Transform playerInstanciate {get{return playerInstance;} }
+    public static GameManager Instance {get{return instance; } }
 
     private void Awake()
     {
@@ -33,13 +34,9 @@ public class GameManager : MonoBehaviour {
         instance = this;
 
         cam = Camera.main.GetComponent<Camera2DFollow>();
-    }
 
-    void Start () {
         InstanciatePlayer();
-
     }
-	
 
     private void InstanciatePlayer()
     {
