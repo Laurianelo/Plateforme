@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class ArmRotation : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
         Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

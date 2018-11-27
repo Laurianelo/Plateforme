@@ -9,7 +9,6 @@ public class Tilling : MonoBehaviour
     private int rightIndex;
     private float viewZone; //recover the area of ​​view of camera
 
-    // Use this for initialization
     void Start()
     {
         sprites = new Transform[transform.childCount];
@@ -23,7 +22,6 @@ public class Tilling : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         viewZone = (Camera.main.orthographicSize * Screen.width) / Screen.height;

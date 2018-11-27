@@ -256,7 +256,7 @@ MonoBehaviour:
   damage: 10
   notToHit:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 1536
   bulletTrailPrefab: {fileID: 4562428760688310, guid: 8a84fa65f04df30458c7077fd4ebc3e9,
     type: 2}
   flashPrefab: {fileID: 4700682513514814, guid: 568e347535478e949ab251e0cdb53214,

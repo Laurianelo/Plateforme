@@ -11,6 +11,10 @@ using Thread = Pathfinding.WindowsStore.Thread;
 #else
 using Thread = System.Threading.Thread;
 #endif
+//commentaire debug chiant
+//1624
+//763 774
+
 
 [ExecuteInEditMode]
 [AddComponentMenu("Pathfinding/Pathfinder")]
@@ -760,7 +764,7 @@ public class AstarPath : VersionedMonoBehaviour {
 	 * \see Pathfinding.Path.DebugString
 	 */
 	private void LogPathResults (Path p) {
-		if (logPathResults == PathLog.None || (logPathResults == PathLog.OnlyErrors && !p.error)) {
+		/*if (logPathResults == PathLog.None || (logPathResults == PathLog.OnlyErrors && !p.error)) {
 			return;
 		}
 
@@ -770,7 +774,7 @@ public class AstarPath : VersionedMonoBehaviour {
 			inGameDebugPath = debug;
 		} else {
 			Debug.Log(debug);
-		}
+		}*/
 	}
 
 	/**
@@ -1621,7 +1625,7 @@ public class AstarPath : VersionedMonoBehaviour {
 
 		System.GC.Collect();
 
-		Log("Scanning - Process took "+(lastScanTime*1000).ToString("0")+" ms to complete");
+		//Log("Scanning - Process took "+(lastScanTime*1000).ToString("0")+" ms to complete");
 	}
 
 	IEnumerable<Progress> ScanGraph (NavGraph graph) {

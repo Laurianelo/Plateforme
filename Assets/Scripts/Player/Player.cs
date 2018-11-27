@@ -11,11 +11,6 @@ public class Player : PlayerStats {
     public bool PlayerIsDead { get { return PV <= 0f; } }
 
 
-	void Start () {
-		
-	}
-	
-
 	void Update () {
         PlayerFall();
         if (rebornEvent != null && PlayerIsDead)
@@ -37,5 +32,10 @@ public class Player : PlayerStats {
     public void ReceiveDamage(float damage)
     {
         PV -= damage;
+    }
+
+    public void Attack(EnemyFight enemy)
+    {
+        enemy.ReceiveDamage(Damage);
     }
 }

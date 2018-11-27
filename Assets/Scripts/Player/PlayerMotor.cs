@@ -21,13 +21,11 @@ public class PlayerMotor : MonoBehaviour {
 
     public bool Grounded { get { return grounded; } }
 
-    // Use this for initialization
     void Start() {
         velocity = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void FixedUpdate() {
         RunAndJumpPerform();
     }

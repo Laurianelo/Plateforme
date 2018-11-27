@@ -111,7 +111,7 @@ PlayerSettings:
   psp2PowerMode: 0
   psp2AcquireBGM: 1
   vulkanEnableSetSRGBWrite: 0
-  vulkanUseSWCommandBuffers: 0
+  vulkanUseSWCommandBuffers: 1
   m_SupportedAspectRatios:
     4:3: 1
     5:4: 1
@@ -545,7 +545,7 @@ PlayerSettings:
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
   additionalIl2CppArgs: 
-  scriptingRuntimeVersion: 0
+  scriptingRuntimeVersion: 1
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
@@ -617,7 +617,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 3d50147c-f962-4e6d-8a6b-9736b13ca980
   projectName: Plateforme
   organizationId: laurianelo

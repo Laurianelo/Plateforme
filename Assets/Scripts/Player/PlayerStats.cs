@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour {
     public PlayerStats()
     {
         PV = 100;
-        Damage = 25;
+        Damage = 10;
 
     }
 }
